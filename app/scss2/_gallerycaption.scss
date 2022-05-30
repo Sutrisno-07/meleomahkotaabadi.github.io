@@ -1,0 +1,23 @@
+.gallerycaption{
+    position: relative;
+    top: 80px;
+
+    .nameproduct{
+        font-family: $font-title;
+        font-weight: 500;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        color: $dark-grey;
+
+    @include breakpoint(medium){
+        font-size: 1.25rem;
+    }
+    }
+
+    .nameproduct::after{
+        content: '';
+        display: block;
+        height: 2px;
+        background-color: $medium-yellow;
+    }
+}

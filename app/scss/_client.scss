@@ -1,0 +1,60 @@
+.client{
+position: relative;
+top: 50px;
+    
+    &__item{
+        margin: 10px auto;
+
+        @include breakpoint (large){
+            
+        }
+
+        &__logo{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 60px );
+            justify-items: center;
+            // border: 1px solid blue;
+
+            @include breakpoint (medium){
+                grid-template-columns: repeat(7, 1fr);
+                grid-template-rows: repeat(2, 80px );;
+            }
+           
+            @include breakpoint (large){
+                grid-template-columns: repeat(8, 1fr);
+                grid-template-rows: repeat(2, 80px );;
+            }
+                          
+                img{
+                     width: 50px;
+                    //  margin: 0 20px;
+                    //  border: 1px solid red;
+                  
+                    @include breakpoint (medium){
+                        width: 70px;
+                    }
+                          
+                }  
+        }
+    }
+
+    &__button{
+        max-width: 80px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: space-between;
+
+        .button-client-left, .button-client-right{
+            width: 26px;
+            height: 26px;
+            background-color: $dark-grey;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 26px;
+            color: $white;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+    }
+}

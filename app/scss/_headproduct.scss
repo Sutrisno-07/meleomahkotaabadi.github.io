@@ -1,0 +1,93 @@
+.headproduct{ 
+    position: relative;
+    top: 50px;
+
+    &__slider{
+        
+
+        &__items{
+
+            .item.active{
+                display: block;
+                                                                     
+                img{
+                    width: 100%;
+                }
+            }
+
+            .item{
+                display: none;
+          
+            }
+
+        }
+
+        .left-slide, .right-slide{
+            position: absolute;
+            width: 25px;
+            height: 50px;
+            background-color: $white;
+            border-radius: 10%;
+            top: 33%;
+            text-align: center;
+            line-height: 50px;
+            font-family: $font-title;
+            font-weight: 300;
+            font-size: 1.5rem;
+            box-shadow: 0 0 10px $dark-black; 
+            opacity: 0.5; 
+            transition: all 0.35s ease-in-out;
+            cursor: pointer;
+        }
+    
+        .left-slide{
+            left: 20px
+        }
+    
+        .right-slide{
+            right: 20px;
+        }
+    
+        @include breakpoint(medium){
+    
+            .left-slide, .right-slide{
+                height: 55px;
+                line-height: 55px;
+                top: 40%;
+            }
+
+            .left-slide{
+                left: 30px;
+            }
+
+            .right-slide{
+                right: 30px;
+            }
+        }   
+    
+        @include breakpoint(large){
+    
+            .left-slide, .right-slide{
+                width: 30px;
+                height: 70px;
+                background-color: $white;
+                line-height: 70px;
+                top: 40%;
+            }
+            .left-slide{
+                left: 40px;
+            }
+
+            .right-slide{
+                right: 40px;
+            }
+        }    
+    }
+
+    &__slider:hover{
+        .left-slide, .right-slide{
+            opacity: 0.65;
+        }
+    }
+
+}

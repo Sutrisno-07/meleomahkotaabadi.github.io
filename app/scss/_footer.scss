@@ -1,0 +1,202 @@
+.footer {
+    position: relative;
+    top: 130px;
+    font-family: $font-title;
+    background-color: $medium-black;
+    padding: 22px 22px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+            "logo"
+            "address"
+            "contact"
+            "ourproducts"
+            "social"
+            "copyright";
+    gap: 30px 0;
+            text-align: center;
+
+    @include breakpoint(medium){
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "logo logo"
+            "address contact"
+            "ourproducts social"
+            "copyright copyright";
+        padding: 30px 90px;
+        gap: 10px 25px;
+        text-align: left;
+    }
+
+    @include breakpoint(large) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "logo logo logo logo"
+            "address contact ourproducts social"
+            "copyright copyright copyright copyright";
+        gap: 30px 28px;
+    }
+
+    svg{
+        width: 14px;
+        fill: $medium-yellow;
+        margin-right: 7px;
+    }
+
+    .main-title{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+
+        @include breakpoint(medium){
+            justify-content: left;
+        }
+    }
+
+    .title {
+        font-size: 1rem;
+        color: $medium-yellow;
+        
+        @include breakpoint(medium){
+            font-size: 1.1rem;
+        }
+    }   
+
+    .title-desc {
+        font-size: 0.9rem;
+        line-height: 1.35rem;
+        color: $light-grey;
+        margin-bottom: 15px;
+
+        @include breakpoint(medium){
+            font-size: 0.95rem;
+        }
+    }        
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        line-height: 52px;
+        grid-area: logo;
+        justify-content: center;
+
+        @include breakpoint(medium){
+            justify-content: left;
+             }
+         }
+
+        img {
+            width: 52px;
+            margin-right: 7px;
+        }
+
+        h4 {
+            color: $medium-yellow;
+            font-weight: 400;
+            font-size: 1.3rem;      
+    }
+
+    &__address {
+        grid-area: address;             
+    }
+
+    &__contact{
+        grid-area: contact;
+
+        @include breakpoint(large){
+            justify-self: right; 
+        }
+                
+        svg{
+            width: 18px;
+        }
+    }
+
+    &__ourproducts{
+        grid-area: ourproducts;
+
+        @include breakpoint(large){
+            justify-self: right; 
+        }
+
+        .product-text{
+            margin-bottom: 11px;
+        }
+        .our-product{
+            li{
+                list-style: none;
+                transition: 300ms ease-in-out;
+            }
+
+            li a{
+                text-decoration: none;
+                font-size: 0.85rem;
+                line-height: 1.6rem;
+                color: $light-grey;
+                text-transform: uppercase;
+
+                @include breakpoint(medium){
+                    font-size: 0.85rem;
+                }
+            }
+
+            li:hover{
+                transform: translateX(2px);
+                
+            }
+
+            li a:hover{
+                text-decoration: underline;
+                color: $medium-yellow;
+            }
+        }      
+    }
+
+    &__social{
+        grid-area: social;
+        text-align: center;
+
+        @include breakpoint(medium){
+        text-align: left;
+        }
+
+        @include breakpoint(large){
+        text-align: center;
+        }
+    }
+
+    &__copyright{
+        position: relative;
+        margin-top: 25px;
+        grid-area: copyright;
+        text-align: center;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            top: -12px;
+            left: 0;
+            height: 1px;
+            background-color: $medium-yellow;
+        }
+
+        p{
+            color: $light-grey;
+            font-size: 0.8rem;
+            
+
+            a{
+                text-decoration: none;
+                color: $medium-yellow;
+            }
+
+            @include breakpoint(medium){
+                font-size: 0.9rem;
+                    br{
+                        display: none;
+                    }
+            }
+        }
+    }    
+}

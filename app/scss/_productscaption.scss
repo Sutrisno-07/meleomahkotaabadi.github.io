@@ -1,0 +1,40 @@
+.productscaption, .clienscaption, .machinecaption, .productioncaption{
+    position: relative;
+    top: 44px;
+    padding: 2px 2px;
+    border-top: 2px solid $medium-yellow;
+    border-bottom: 2px solid $medium-yellow;
+
+    @include breakpoint(large){
+        border-top: 3px solid $medium-yellow;
+        border-bottom: 3px solid $medium-yellow;
+    }
+    &__text{
+        
+        h5{
+            font-family: $font-title;
+            font-weight: 400;
+            text-align: center;
+            color: $medium-grey;
+            font-size: 1rem;
+            padding: 2px 0px;
+
+            @include breakpoint(medium){
+                font-size: 1.2rem;
+                padding: 5px 0px;
+            }
+
+            @include breakpoint(large){
+                font-size: 1.33rem;
+                padding: 5px 0px;
+            }
+        }
+    }
+}
+.machinecaption{
+    top: 60px;
+}
+
+.productioncaption{
+    top: 80px;
+}

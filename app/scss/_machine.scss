@@ -1,0 +1,65 @@
+.machine{
+    position: relative;
+    top: 70px;
+        
+        &__item{
+            margin: 10px auto;
+    
+            @include breakpoint (large){
+                max-width: 90%;
+            }
+    
+            &__img{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 110px);
+                justify-items: center;
+                // scroll-behavior: smooth;
+                // overflow: hidden;
+
+                @include breakpoint (medium){
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: repeat(2, 140px);
+                }
+
+                @include breakpoint (large){
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: repeat(2, 150px);
+                }
+                                    
+                    img{
+                         width: 100px;
+                         box-shadow: 5px 5px 5px rgba($light-grey, 0.2);
+
+                        @include breakpoint (medium){
+                            width: 120px;
+                        }
+
+                        @include breakpoint (large){
+                            width: 135px;
+                        }
+                    }  
+            }
+        }
+    
+        &__button{
+            max-width: 80px;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-between;
+    
+            .button-machine-left, .button-machine-right{
+                width: 26px;
+                height: 26px;
+                background-color: $dark-grey;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 26px;
+                color: $white;
+                font-size: 1.1rem;
+                cursor: pointer;
+            }
+        }
+    
+    
+    }

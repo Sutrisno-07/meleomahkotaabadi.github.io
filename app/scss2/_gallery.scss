@@ -1,0 +1,56 @@
+.gallery{
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+   
+    &__items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        
+
+        img{
+            width: 150px;
+            border-radius: 20px;
+            transition: 0.3s ease-in-out;
+
+            @include breakpoint(medium){
+                width: 170px;
+            }
+        
+            @include breakpoint(large){
+                width: 200px;
+            }
+        }
+
+        img:hover{
+            transform: scale(1.015);
+            opacity: 0.8;
+        }
+
+        .itemsname{
+            font-family: $font-title;
+            font-weight: 400;
+            font-size: 1rem;
+            color: $dark-grey;
+            max-width: 145px;
+            text-align: center;
+
+            @include breakpoint(medium){
+                max-width: 180px;
+                font-size: 1.05rem;
+            }
+        }
+    }
+
+    &__items:hover{
+        
+        .itemsname{
+            color: $ocean-blue;
+        }
+    }
+}    

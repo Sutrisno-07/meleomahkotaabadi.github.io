@@ -1,0 +1,139 @@
+.mainproduct{
+    font-family: $font-title;
+    position: relative;
+    top: 80px;
+
+    &__container{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        
+        @include breakpoint(medium){
+            grid-template-columns: 1fr 1.5fr;            
+            justify-items: left;
+            gap: 30px;
+        }
+
+        &__item{   
+            position: relative;
+            display: flex;
+            width: 270px;
+            border: 1px solid red;
+            overflow: hidden;
+            
+            &__prev-btn, &__next-btn{
+                position: absolute;
+                top: 42%;
+                font-size: 3rem;
+                color: $white;
+                opacity: 0.65;
+                font-family: $font-title;
+                cursor: pointer;
+            }
+    
+            &__prev-btn{
+                left: 3%;
+            }
+    
+            &__next-btn{
+                right: 3%;
+            }
+
+            @include breakpoint(small){
+                width: 330px;
+            }
+
+            @include breakpoint(medium){
+                width: 360px;
+            }
+
+            @include breakpoint(large){
+                width: 420px;
+            }
+
+            img{
+                width: 270px;
+                border-radius: 25px; 
+
+            
+                @include breakpoint(small){
+                    width: 330px;
+                }
+
+                @include breakpoint(medium){
+                    width: 360px;
+                }
+
+                @include breakpoint(large){
+                    width: 420px;
+                }
+            }
+        }
+
+
+        &__details{
+            color: $medium-grey;
+
+            .nameproduct{
+                font-weight: 500;
+                margin-bottom: 15px;
+                text-align: center;
+                font-size: 1.3rem;
+
+                @include breakpoint(medium){
+                    text-align: left;
+                }
+            }
+
+            .maindescription{
+                margin-bottom: 15px;
+                max-width: 270px;
+                font-size: 1rem;
+
+                @include breakpoint(medium){
+                    max-width: max-content;
+                }
+            }
+
+            .specification{
+            margin-bottom: 30px;
+            line-height: 1.5;
+            }
+            
+            .pricerequest{
+                font-size: 1rem;
+                font-family: $font-title;        
+                border: none;
+                padding: 15px 40px;
+                margin-bottom: 30px;
+                border-radius: 10px;
+                color: $white;
+                background-color: $dark-red;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+            }
+        
+            .pricerequest:hover{
+                background-color: $dark-red2;
+            }
+        }
+    }
+
+    &__moredescription{
+        border: 1.5px solid $verylight-grey;
+        padding: 15px;
+
+        .maindetails{
+            border-bottom: 1px solid $verylight-grey;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+
+        }
+
+        .adddetails{
+            line-height: 1.7;
+        }
+    }
+
+}

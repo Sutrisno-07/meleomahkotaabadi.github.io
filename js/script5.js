@@ -36,3 +36,55 @@ const whatsappClose2 = document.querySelector('section.whatsapp .whatsapp__cls__
 whatsappClose2.onclick = function(){
 	whatsappClose1.classList.toggle('btn__close');
 }
+
+
+
+// Slide Product Items ----------------
+
+// const containerSlide = document.querySelector('.mainproduct__container__item');
+// const imgSlide = document.querySelectorAll('.imgslide');
+// const nextBtn = document.querySelector('.mainproduct__container__item__next-btn');
+// const prevBtn = document.querySelector('.mainproduct__container__item__prev-btn');
+
+// let numberOfImages = imgSlide.length;
+// let slideWidth = imgSlide[0].clientWidth;
+// let currentSlide = 0;
+
+// function init() { 
+//     /*   
+//       slideImage[0] = 0
+//       slideImage[1] = 100%
+//       slideImage[2] = 200%
+//       */
+  
+//     imgSlide.forEach((img, i) => {
+//       img.style.left = i * 100 + "%";
+//     });
+  
+//     imgSlide[0].classList.add("active");
+//   }
+  
+//   init();
+
+//   // next-Button
+//   nextBtn.addEventListener("click", () => {
+//     if (currentSlide >= numberOfImages - 1) {
+//       goToSlide(0);
+//       return;
+//     }
+  
+//     currentSlide++;
+//     goToSlide(currentSlide);
+//   });
+  
+//   // Previous Button
+  
+//   prevBtn.addEventListener("click", () => {
+//     if (currentSlide <= 0) {
+//       goToSlide(numberOfImages - 1);
+//       return;
+//     }
+  
+//     currentSlide--;
+//     goToSlide(currentSlide);
+//   });
